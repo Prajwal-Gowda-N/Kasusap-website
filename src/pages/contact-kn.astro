@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactCard from "../components/ContactCard.astro";
+
+const contacts = [
+  {
+    name: "ಡಾ. ಮಂಜುನಾಥ ಭಟ್",
+    title: "ರಾಜ್ಯಾಧ್ಯಕ್ಷರು",
+    description: "ಕನ್ನಡ ಕಾವ್ಯ, ಸಂಶೋಧನೆ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಸಂರಕ್ಷಣೆಗೆ ೩೦ ವರ್ಷಗಳಿಗಿಂತ ಹೆಚ್ಚು ಸೇವೆ ಸಲ್ಲಿಸಿದ ನಮ್ಮ ಸಾಹಿತ್ಯ ಮುಖ್ಯಸ್ಥರು.",
+    location: "ಬೆಂಗಳೂರು",
+    phone: "+91 98765 00001",
+    email: "president@kannadapoetry.org",
+    image: "/images/president.jpg",
+  },
+  {
+    name: "ಶ್ರೀಮತಿ ವಿದ್ಯಾ ಶಂಕರ್",
+    title: "ರಾಜ್ಯ ಉಪಾಧ್ಯಕ್ಷೆ",
+    description: "ಕನ್ನಡ ಸಾಹಿತ್ಯವನ್ನು ಕಾವ್ಯ ಮತ್ತು ಶಿಕ್ಷಣದ ಮೂಲಕ ಪ್ರಚಾರಗೊಳಿಸುವ ಯುವ ಸಾಂಸ್ಕೃತಿಕ ನಾಯಕಿ.",
+    location: "ಮೈಸೂರು",
+    phone: "+91 98765 00002",
+    email: "vp@kannadapoetry.org",
+    image: "/images/vp.jpg",
+  },
+];
+---
+
+<Layout title="ನಮ್ಮ ನಾಯಕತ್ವ">
+  <section class="py-16 px-12 text-left font-[Noto_Serif_Kannada]">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">ನಮ್ಮ ನಾಯಕತ್ವ</h1>
+    <p class="text-gray-600 max-w-3xl mb-12">
+      ಕನ್ನಡ ಕಾವ್ಯ ಪರಿಷತ್ತು ಸಾಹಿತ್ಯ, ಕಾವ್ಯ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ವಿನಿಮಯವನ್ನು ನಮ್ಮ ಗಣ್ಯ ಸದಸ್ಯರ ಮಾರ್ಗದರ್ಶನದಡಿ ಪ್ರೋತ್ಸಾಹಿಸುತ್ತದೆ.
+    </p>
+
+    <div class="flex flex-col gap-8">
+      {contacts.map((person) => (
+        <ContactCard {...person} />
+      ))}
+    </div>
+  </section>
+</Layout>

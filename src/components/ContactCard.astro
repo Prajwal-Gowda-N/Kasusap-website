@@ -1,0 +1,44 @@
+---
+const { name, title, description, location, phone, email, image } = Astro.props;
+---
+
+<div class="contact-card flex items-center gap-4 mx-[20px] transition-transform hover:scale-[1.01]">
+  <!-- Left: Image -->
+  <img
+    src={image}
+    alt={name}
+    class="w-16 h-16 object-cover rounded-full border border-gray-300"
+  />
+
+  <!-- Right: Info -->
+  <div class="flex flex-col text-gray-800 text-left">
+    <h3 class="text-lg font-semibold">{name}</h3>
+    <p class="text-sm text-gray-600">{title}</p>
+
+    <div class="mt-2 text-sm text-gray-700">
+      <p>📍 {location}</p>
+      <p>📞 {phone}</p>
+      <p>✉️ {email}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.contact-card {
+  border-radius: 15px;
+  background: transparent;
+  border: none;
+  padding: 16px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.25),  /* outer soft shadow */
+    0 -4px 6px rgba(255, 255, 255, 0.1); /* faint top highlight */
+  backdrop-filter: blur(4px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.35),
+    0 -6px 12px rgba(255, 255, 255, 0.1);
+}
+</style>

@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactCard from "../components/ContactCard.astro";
+
+const contacts = [
+  {
+    name: "Dr. Manjunath Bhatt",
+    title: "State President",
+    description:
+      "Our literary head who has contributed over 30 years to Kannada poetry, research, and cultural preservation.",
+    location: "Bengaluru",
+    phone: "+91 98765 00001",
+    email: "president@kannadapoetry.org",
+    image: "/images/president.jpg",
+  },
+  {
+    name: "Smt. Vidya Shankar",
+    title: "State Vice President",
+    description:
+      "Youth-oriented cultural leader dedicated to promoting Kannada literature through poetry and education.",
+    location: "Mysuru",
+    phone: "+91 98765 00002",
+    email: "vp@kannadapoetry.org",
+    image: "/images/vp.jpg",
+  },
+  {
+    name: "Prof. Suresh Babu",
+    title: "Secretary",
+    description: "A passionate advocate for classical poetry and cultural awareness.",
+    location: "Hubballi",
+    phone: "+91 98765 00003",
+    email: "secretary@kannadapoetry.org",
+    image: "/images/secretary.jpg",
+  },
+];
+---
+
+<Layout title="Contact - Kannada Poetry Council">
+  <!-- HEADER -->
+<!-- HEADER -->
+<header class="header-card flex items-center gap-3 py-3 px-6 mt-4 h-[80px]">
+  <img src="/images/logo.png" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
+  <div class="contact-card text-center p-6 max-w-3xl mx-auto mt-10">
+  <h2 class="text-3xl font-bold text-gray-900 mb-1">
+    Classical Kannada Poetry
+  </h2>
+  <p class="text-gray-600 leading-snug">
+    Experience the beauty and depth of Kannada’s timeless poetic heritage through verses that celebrate culture, philosophy, and art.
+  </p>
+</div>
+
+</header>
+
+<style>
+.header-card {
+  border-radius: 15px;
+  background: transparent;
+  border: none;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.25),
+    0 -4px 6px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+</style>
+
+
+
+
+
+  <!-- MAIN CONTENT -->
+  <main class="flex flex-col items-center py-10 px-5">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Our Leadership</h2>
+    <p class="text-gray-600 max-w-2xl text-center mb-10">
+      The Kannada Poetry Council promotes literature, poetry, and cultural exchange through the guidance of our distinguished members.
+    </p>
+
+    <!-- Contact Cards Container -->
+    <div class="flex flex-col gap-6 w-full">
+      {contacts.map((person) => (
+        <ContactCard {...person} />
+      ))}
+    </div>
+  </main>
+
+
+</Layout>
