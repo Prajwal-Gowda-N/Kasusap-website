@@ -1,0 +1,6 @@
+---
+// src/components/DistrictGridWrapper.astro
+import DistrictGrid from './DistrictGrid.tsx';
+const { districtsWithEvents } = Astro.props;
+---
+<DistrictGrid client:load districtsWithEvents={districtsWithEvents} />

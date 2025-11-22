@@ -1,0 +1,381 @@
+{
+  "bagalkot": [
+    {
+      "title": { "en": "Bagalkot Utsav", "kn": "ಬಾಗಲಕೋಟೆ ಉತ್ಸವ" },
+      "description": { "en": "Annual cultural festival with folk dances.", "kn": "ವಾರ್ಷಿಕ ಸಾಂಸ್ಕೃತಿಕ ಉತ್ಸವ, ನಾಟ್ಯಗಳೊಂದಿಗೆ." },
+      "images": [
+        "/images/events/bagalkot-1.jpg",
+        "/images/events/bagalkot-2.jpg",
+        "/images/events/bagalkot-3.jpg"
+      ]
+    }
+  ],
+
+  "ballari": [
+    {
+      "title": { "en": "Hampi Utsav", "kn": "ಹಂಪಿ ಉತ್ಸವ" },
+      "description": { "en": "Celebrating the glory of Vijayanagara empire.", "kn": "ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯದ ಗೌರವಾರ್ಥ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/hampi-1.jpg",
+        "/images/events/hampi-2.jpg",
+        "/images/events/hampi-3.jpg",
+        "/images/events/hampi-4.jpg"
+      ]
+    }
+  ],
+
+  "belagavi": [
+    {
+      "title": { "en": "Kittur Utsav", "kn": "ಕಿತ್ತೂರು ಉತ್ಸವ" },
+      "description": { "en": "Honoring Rani Chennamma’s bravery.", "kn": "ರಾಣಿ ಚೆನ್ನಮ್ಮ ಧೈರ್ಯವನ್ನು ಸ್ಮರಿಸುವ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/kittur-1.jpg",
+        "/images/events/kittur-2.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Belagavi Winter Festival", "kn": "ಬೆಳಗಾವಿ ಚಳಿಗಾಲ ಉತ್ಸವ" },
+      "description": { "en": "Food, music and crafts fair.", "kn": "ಆಹಾರ, ಸಂಗೀತ ಮತ್ತು ಕರಕುಶಲ ವಸ್ತುಗಳ ಮೇಳ." },
+      "images": [
+        "/images/events/belagavi-winter.jpg"
+      ]
+    }
+  ],
+
+  "bengaluru-rural": [
+    {
+      "title": { "en": "Devanahalli Pomelo Mela", "kn": "ದೇವನಹಳ್ಳಿ ಬದನೆಕಾಯಿ ಮೇಳ" },
+      "description": { "en": "Famous citrus fruit fair.", "kn": "ಪ್ರಸಿದ್ಧ ನಿಂಬೆಹಣ್ಣಿನ ಮೇಳ." },
+      "images": [
+        "/images/events/devanahalli-1.jpg",
+        "/images/events/devanahalli-2.jpg"
+      ]
+    }
+  ],
+
+  "bengaluru-urban": [
+    {
+      "title": { "en": "Bengaluru Karaga", "kn": "ಬೆಂಗಳೂರು ಕರಗ" },
+      "description": { "en": "Ancient Draupadi temple festival.", "kn": "ಪ್ರಾಚೀನ ದ್ರೌಪದಿ ದೇವಾಲಯ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/karaga-1.jpg",
+        "/images/events/karaga-2.jpg",
+        "/images/events/karaga-3.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Bengaluru International Film Festival", "kn": "ಬೆಂಗಳೂರು ಅಂತರರಾಷ್ಟ್ರೀಯ ಚಲನಚಿತ್ರೋತ್ಸವ" },
+      "description": { "en": "Showcasing global cinema.", "kn": "ಜಾಗತಿಕ ಚಲನಚಿತ್ರಗಳ ಪ್ರದರ್ಶನ." },
+      "images": [
+        "/images/events/biff.jpg"
+      ]
+    }
+  ],
+
+  "bidar": [
+    {
+      "title": { "en": "Bidar Utsav", "kn": "ಬೀದರ್ ಉತ್ಸವ" },
+      "description": { "en": "Heritage walk and Bidriware showcase.", "kn": "ಪರಂಪರೆ ನಡಿಗೆ ಮತ್ತು ಬಿದ್ರಿ ಕಲೆ ಪ್ರದರ್ಶನ." },
+      "images": [
+        "/images/events/bidar-1.jpg",
+        "/images/events/bidar-2.jpg"
+      ]
+    }
+  ],
+
+  "chamarajanagar": [
+    {
+      "title": { "en": "Male Mahadeshwara Jatre", "kn": "ಮಲೆ ಮಹದೇಶ್ವರ ಜಾತ್ರೆ" },
+      "description": { "en": "Grand hill temple fair.", "kn": "ಗುಡ್ಡದ ದೊಡ್ಡ ದೇವಾಲಯ ಮೇಳ." },
+      "images": [
+        "/images/events/mmjatre-1.jpg",
+        "/images/events/mmjatre-2.jpg",
+        "/images/events/mmjatre-3.jpg"
+      ]
+    }
+  ],
+
+  "chikkaballapur": [
+    {
+      "title": { "en": "Nandi Hills Sunrise Festival", "kn": "ನಂದಿ ಬೆಟ್ಟ ಸೂರ್ಯೋದಯ ಉತ್ಸವ" },
+      "description": { "en": "Early morning trek and music.", "kn": "ಬೆಳಗಿನ ಟ್ರೆಕ್ ಮತ್ತು ಸಂಗೀತ." },
+      "images": [
+        "/images/events/nandi-sunrise.jpg"
+      ]
+    }
+  ],
+
+  "chikkamagaluru": [
+    {
+      "title": { "en": "Coffee Santhe", "kn": "ಕಾಫಿ ಸಂತೆ" },
+      "description": { "en": "Coffee tasting and plantation tours.", "kn": "ಕಾಫಿ ರುಚಿ ಮತ್ತು ತೋಟ ಪ್ರವಾಸ." },
+      "images": [
+        "/images/events/coffee-1.jpg",
+        "/images/events/coffee-2.jpg"
+      ]
+    }
+  ],
+
+  "chitradurga": [
+    {
+      "title": { "en": "Chitradurga Jatre", "kn": "ಚಿತ್ರದುರ್ಗ ಜಾತ್ರೆ" },
+      "description": { "en": "Fort festival with cultural programs.", "kn": "ಕೋಟೆ ಉತ್ಸವ ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮಗಳೊಂದಿಗೆ." },
+      "images": [
+        "/images/events/chitradurga-fort.jpg"
+      ]
+    }
+  ],
+
+  "dakshina-kannada": [
+    {
+      "title": { "en": "Mangaluru Dasara", "kn": "ಮಂಗಳೂರು ದಸರಾ" },
+      "description": { "en": "Tiger dance and grand procession.", "kn": "ಪುಲಿ ನೃತ್ಯ ಮತ್ತು ಮೆರವಣಿಗೆ." },
+      "images": [
+        "/images/events/mangaluru-dasara-1.jpg",
+        "/images/events/mangaluru-dasara-2.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Kateel Durga Parameshwari Jatre", "kn": "ಕಟೀಲು ದುರ್ಗಾ ಪರಮೇಶ್ವರಿ ಜಾತ್ರೆ" },
+      "description": { "en": "River temple festival.", "kn": "ನದಿ ದೇವಾಲಯ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/kateel.jpg"
+      ]
+    }
+  ],
+
+  "davanagere": [
+    {
+      "title": { "en": "Davanagere Butter Dosa Mela", "kn": "ದಾವಣಗೆರೆ ಬೆಣ್ಣೆ ದೋಸೆ ಮೇಳ" },
+      "description": { "en": "Food festival celebrating local cuisine.", "kn": "ಸ್ಥಳೀಯ ಆಹಾರವನ್ನು ಆಚರಿಸುವ ಮೇಳ." },
+      "images": [
+        "/images/events/dosa-mela.jpg"
+      ]
+    }
+  ],
+
+  "dharwad": [
+    {
+      "title": { "en": "Dharwad Utsav", "kn": "ಧಾರವಾಡ ಉತ್ಸವ" },
+      "description": { "en": "Literature, music and food fair.", "kn": "ಸಾಹಿತ್ಯ, ಸಂಗೀತ ಮತ್ತು ಆಹಾರ ಮೇಳ." },
+      "images": [
+        "/images/events/dharwad-utsav.jpg"
+      ]
+    }
+  ],
+
+  "gadag": [
+    {
+      "title": { "en": "Trikuteshwara Jatre", "kn": "ತ್ರಿಕೂಟೇಶ್ವರ ಜಾತ್ರೆ" },
+      "description": { "en": "Ancient temple car festival.", "kn": "ಪ್ರಾಚೀನ ದೇವಾಲಯ ರಥೋತ್ಸವ." },
+      "images": [
+        "/images/events/trikuteshwara.jpg"
+      ]
+    }
+  ],
+
+  "hassan": [
+    {
+      "title": { "en": "Hoysala Utsav", "kn": "ಹೊಯ್ಸಳ ಉತ್ಸವ" },
+      "description": { "en": "Celebrating Hoysala architecture.", "kn": "ಹೊಯ್ಸಳ ವಾಸ್ತುಶಿಲ್ಪವನ್ನು ಆಚರಿಸುವ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/hoysaleshwara-1.jpg",
+        "/images/events/hoysaleshwara-2.jpg"
+      ]
+    }
+  ],
+
+  "haveri": [
+    {
+      "title": { "en": "Haveri Jatre", "kn": "ಹಾವೇರಿ ಜಾತ್ರೆ" },
+      "description": { "en": "Local temple fair with music.", "kn": "ಸ್ಥಳೀಯ ದೇವಾಲಯ ಮೇಳ ಮತ್ತು ಸಂಗೀತ." },
+      "images": [
+        "/images/events/haveri-jatre.jpg"
+      ]
+    }
+  ],
+
+  "kalaburagi": [
+    {
+      "title": { "en": "Kalaburagi Utsav", "kn": "ಕಲಬುರಗಿ ಉತ್ಸವ" },
+      "description": { "en": "Heritage and Sufi music festival.", "kn": "ಪರಂಪರೆ ಮತ್ತು ಸೂಫಿ ಸಂಗೀತ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/kalaburagi-sufi.jpg"
+      ]
+    }
+  ],
+
+  "kodagu": [
+    {
+      "title": { "en": "Kodava Hockey Festival", "kn": "ಕೊಡವ ಹಾಕಿ ಉತ್ಸವ" },
+      "description": { "en": "Family hockey tournament.", "kn": "ಕುಟುಂಬ ಹಾಕಿ ಪಂದ್ಯಾವಳಿ." },
+      "images": [
+        "/images/events/kodava-hockey.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Madikeri Dasara", "kn": "ಮಡಿಕೇರಿ ದಸರಾ" },
+      "description": { "en": "Hill station cultural celebration.", "kn": "ಗುಡ್ಡದ ಸಾಂಸ್ಕೃತಿಕ ಆಚರಣೆ." },
+      "images": [
+        "/images/events/madikeri-dasara.jpg"
+      ]
+    }
+  ],
+
+  "kolar": [
+    {
+      "title": { "en": "Kolar Gold Fields Revival Fest", "kn": "ಕೋಲಾರ ಗೋಲ್ಡ್ ಫೀಲ್ಡ್ಸ್ ಪುನರುಜ್ಜೀವನ ಉತ್ಸವ" },
+      "description": { "en": "Heritage mining town festival.", "kn": "ಪರಂಪರೆ ಗಣಿಗಾರಿಕೆ ಪಟ್ಟಣ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/kgf.jpg"
+      ]
+    }
+  ],
+
+  "koppal": [
+    {
+      "title": { "en": "Koppal Jatre", "kn": "ಕೊಪ್ಪಳ ಜಾತ್ರೆ" },
+      "description": { "en": "Local deity festival.", "kn": "ಸ್ಥಳೀಯ ದೇವತೆ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/koppal-jatre.jpg"
+      ]
+    }
+  ],
+
+  "mandya": [
+    {
+      "title": { "en": "Krishnaraja Sagar Light & Sound", "kn": "ಕೃಷ್ಣರಾಜ ಸಾಗರ ಬೆಳಕು ಮತ್ತು ಧ್ವನಿ" },
+      "description": { "en": "Evening dam illumination show.", "kn": "ಸಂಜೆ ಆಣೆಕಟ್ಟು ಬೆಳಕಿನ ಪ್ರದರ್ಶನ." },
+      "images": [
+        "/images/events/krs-light.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Mandya Jaggery Mela", "kn": "ಮಂಡ್ಯ ಬೆಲ್ಲದ ಮೇಳ" },
+      "description": { "en": "Sweet jaggery products fair.", "kn": "ಸಿಹಿ ಬೆಲ್ಲದ ಉತ್ಪನ್ನಗಳ ಮೇಳ." },
+      "images": [
+        "/images/events/jaggery.jpg"
+      ]
+    }
+  ],
+
+  "mysuru": [
+    {
+      "title": { "en": "Mysuru Dasara", "kn": "ಮೈಸೂರು ದಸರಾ" },
+      "description": { "en": "World-famous 10-day royal festival.", "kn": "ವಿಶ್ವಪ್ರಸಿದ್ಧ ೧೦ ದಿನಗಳ ರಾಜಕೀಯ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/dasara-1.jpg",
+        "/images/events/dasara-2.jpg",
+        "/images/events/dasara-3.jpg",
+        "/images/events/dasara-4.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Mysuru Palace Light Show", "kn": "ಮೈಸೂರು ಅರಮನೆ ಬೆಳಕಿನ ಶೋ" },
+      "description": { "en": "Evening illumination spectacle.", "kn": "ಸಂಜೆ ಬೆಳಕಿನ ಅದ್ಭುತ ಪ್ರದರ್ಶನ." },
+      "images": [
+        "/images/events/palace-light.jpg"
+      ]
+    }
+  ],
+
+  "raichur": [
+    {
+      "title": { "en": "Raichur Utsav", "kn": "ರಾಯಚೂರು ಉತ್ಸವ" },
+      "description": { "en": "Fort and cultural heritage fair.", "kn": "ಕೋಟೆ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಪರಂಪರೆ ಮೇಳ." },
+      "images": [
+        "/images/events/raichur-fort.jpg"
+      ]
+    }
+  ],
+
+  "ramanagara": [
+    {
+      "title": { "en": "Ramanagara Silk Mela", "kn": "ರಾಮನಗರ ರೇಷ್ಮೆ ಮೇಳ" },
+      "description": { "en": "Silk sarees and handicrafts.", "kn": "ರೇಷ್ಮೆ ಸೀರೆಗಳು ಮತ್ತು ಕೈಮಗ್ಗ." },
+      "images": [
+        "/images/events/silk-mela.jpg"
+      ]
+    }
+  ],
+
+  "shivamogga": [
+    {
+      "title": { "en": "Jog Falls Monsoon Festival", "kn": "ಜೋಗ ಜಲಪಾತ ಮಾನ್ಸೂನ್ ಉತ್ಸವ" },
+      "description": { "en": "Celebrating the majesty of Jog Falls.", "kn": "ಜೋಗ ಜಲಪಾತದ ಭವ್ಯತೆಯನ್ನು ಆಚರಿಸುವ ಉತ್ಸವ." },
+      "images": [
+        "/images/events/jog-falls-1.jpg",
+        "/images/events/jog-falls-2.jpg"
+      ]
+    }
+  ],
+
+  "tumakuru": [
+    {
+      "title": { "en": "Tumakuru Siddaganga Jatre", "kn": "ತುಮಕೂರು ಸಿದ್ಧಗಂಗಾ ಜಾತ್ರೆ" },
+      "description": { "en": "Spiritual and cultural fair.", "kn": "ಆಧ್ಯಾತ್ಮಿಕ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಮೇಳ." },
+      "images": [
+        "/images/events/siddaganga.jpg"
+      ]
+    }
+  ],
+
+  "udupi": [
+    {
+      "title": { "en": "Udupi Paryaya", "kn": "ಉಡುಪಿ ಪರ್ಯಾಯ" },
+      "description": { "en": "Biennial Krishna temple handover.", "kn": "ದ್ವೈವಾರ್ಷಿಕ ಕೃಷ್ಣ ದೇವಾಲಯ ಹಸ್ತಾಂತರ." },
+      "images": [
+        "/images/events/paryaya-1.jpg",
+        "/images/events/paryaya-2.jpg"
+      ]
+    },
+    {
+      "title": { "en": "Malpe Beach Festival", "kn": "ಮಲ್ಪೆ ಬೀಚ್ ಉತ್ಸವ" },
+      "description": { "en": "Beach sports and music.", "kn": "ಬೀಚ್ ಕ್ರೀಡೆಗಳು ಮತ್ತು ಸಂಗೀತ." },
+      "images": [
+        "/images/events/malpe.jpg"
+      ]
+    }
+  ],
+
+  "uttara-kannada": [
+    {
+      "title": { "en": "Karwar Beach Festival", "kn": "ಕಾರವಾರ ಬೀಚ್ ಉತ್ಸವ" },
+      "description": { "en": "Coastal music and seafood fair.", "kn": "ತೀರದ ಸಂಗೀತ ಮತ್ತು ಸಮುದ್ರಾಹಾರ ಮೇಳ." },
+      "images": [
+        "/images/events/karwar-1.jpg",
+        "/images/events/karwar-2.jpg"
+      ]
+    }
+  ],
+
+  "vijayanagara": [
+    {
+      "title": { "en": "Vijayanagara Utsav", "kn": "ವಿಜಯನಗರ ಉತ್ಸವ" },
+      "description": { "en": "Reviving Hampi’s golden era.", "kn": "ಹಂಪಿಯ ಚಿನ್ನದ ಯುಗವನ್ನು ಪುನರುಜ್ಜೀವನ." },
+      "images": [
+        "/images/events/vijayanagara-hampi.jpg"
+      ]
+    }
+  ],
+
+  "vijayapura": [
+    {
+      "title": { "en": "Gol Gumbaz Music Festival", "kn": "ಗೋಲ ಗುಂಬಜ್ ಸಂಗೀತೋತ್ಸವ" },
+      "description": { "en": "Acoustics under the whispering dome.", "kn": "ಗುಂಬಜಿನಡಿ ಧ್ವನಿ ಪ್ರತಿಧ್ವನಿ ಸಂಗೀತ." },
+      "images": [
+        "/images/events/gol-gumbaz.jpg"
+      ]
+    }
+  ],
+
+  "yadgir": [
+    {
+      "title": { "en": "Yadgir Fort Festival", "kn": "ಯಾದಗಿರಿ ಕೋಟೆ ಉತ್ಸವ" },
+      "description": { "en": "Heritage fort cultural event.", "kn": "ಪರಂಪರೆ ಕೋಟೆ ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮ." },
+      "images": [
+        "/images/events/yadgir-fort.jpg"
+      ]
+    }
+  ]
+}

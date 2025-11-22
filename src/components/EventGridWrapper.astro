@@ -1,0 +1,6 @@
+---
+// src/components/EventGridWrapper.astro
+import EventGrid from './EventGrid.tsx';
+const { events } = Astro.props;
+---
+<EventGrid client:load events={events} />
