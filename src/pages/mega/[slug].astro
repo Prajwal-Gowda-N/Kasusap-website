@@ -1,0 +1,63 @@
+---
+// src/pages/mega/[slug].astro
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/NavbarSolid.tsx';
+import MegaCarousel from '../../components/MegaCarousel.tsx';
+import ReactiveHeading from '../../components/ReactiveHeading.tsx';
+import ReactiveText from '../../components/ReactiveText.tsx';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'poetry-fest' } },
+    { params: { slug: 'literature-conclave' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const megaEvents = {
+  'poetry-fest': {
+    nameEn: 'Grand Kannada Poetry Festival',
+    nameKn: 'ಭವ್ಯ ಕನ್ನಡ ಕಾವ್ಯೋತ್ಸವ',
+    photos: ['/images/mega/poetry-1.jpg', '/images/mega/poetry-2.jpg', '/images/mega/poetry-3.jpg'],
+    descEn: `A 3-day celebration of Kannada poetry.\n200+ poets from across Karnataka.\nLive recitals with classical music.\nHeld under open sky at Lalbagh.\nFree entry for all poetry lovers.`,
+    descKn: `ಕನ್ನಡ ಕಾವ್ಯದ ೩ ದಿನಗಳ ಆಚರಣೆ.\nಕರ್ನಾಟಕದಾದ್ಯಂತ ೨೦೦+ ಕವಿಗಳು.\nಶಾಸ್ತ್ರೀಯ ಸಂಗೀತದೊಂದಿಗೆ ಜೀವಂತ ಪಠಣ.\nಲಾಲ್‌ಬಾಗ್‌ನಲ್ಲಿ ತೆರೆದ ಆಕಾಶದಡಿ.\nಎಲ್ಲ ಕಾವ್ಯ ಪ್ರಿಯರಿಗೆ ಉಚಿತ ಪ್ರವೇಶ.`
+  },
+  'literature-conclave': {
+    nameEn: 'Kannada Literature Conclave',
+    nameKn: 'ಕನ್ನಡ ಸಾಹಿತ್ಯ ಸಮಾವೇಶ',
+    photos: ['/images/mega/conclave-1.jpg', '/images/mega/conclave-2.jpg'],
+    descEn: `Panel discussions with Jnanpith winners.\nBook launches and signing sessions.\nWorkshops on scriptwriting.\nInteractive sessions with readers.\nLive-streamed on YouTube.`,
+    descKn: `ಜ್ಞಾನಪೀಠ ಪ್ರಶಸ್ತಿ ವಿಜೇತರೊಂದಿಗೆ ಚರ್ಚೆ.\nಪುಸ್ತಕ ಬಿಡುಗಡೆ ಮತ್ತು ಸಹಿ ಸಮಾರಂಭ.\nಚಿತ್ರಕಥೆ ಬರವಣಿಗೆ ಕಾರ್ಯಾಗಾರ.\nಓದುಗರೊಂದಿಗೆ ಸಂವಾದ.\nಯೂಟ್ಯೂಬ್‌ನಲ್ಲಿ ಲೈವ್-ಸ್ಟ್ರೀಮ್.`
+  }
+};
+
+const event = megaEvents[slug as keyof typeof megaEvents];
+---
+<Layout title={event.nameEn}>
+  <Navbar client:load />
+
+  <div class="pt-20 md:pt-0 max-w-5xl mx-auto px-4 py-8">
+    <a href="/" class="inline-flex items-center gap-2 text-blue-600 hover:underline mb-8">
+      ← Back to Home
+    </a>
+
+    <ReactiveHeading
+      client:load
+      en={event.nameEn}
+      kn={event.nameKn}
+      class="text-4xl md:text-5xl font-bold text-center text-blue-800 mb-10"
+    />
+
+    <MegaCarousel client:load images={event.photos} height="h-80" />
+
+    <div class="mt-10 bg-white rounded-2xl shadow-xl p-8">
+      <ReactiveText
+        client:load
+        en={event.descEn}
+        kn={event.descKn}
+        class="text-lg md:text-xl text-gray-700 leading-relaxed whitespace-pre-line"
+      />
+    </div>
+  </div>
+</Layout>

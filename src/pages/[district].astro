@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/NavbarSolid.tsx';
+import DistrictHeader from '../components/DistrictHeader.tsx';
+import EventGridWrapper from '../components/EventGridWrapper.astro';
+import { districtName } from '../lib/districtnames';
+import eventsData from '../data/events.json';
+
+export async function getStaticPaths() {
+  return Object.keys(eventsData).map(slug => ({ params: { district: slug } }));
+}
+
+const { district } = Astro.params;
+const events = eventsData[district as keyof typeof eventsData] || [];
+---
+<Layout title={districtName(district)}>
+  <Navbar client:load />
+  <div class="pt-20 md:pt-0 max-w-7xl mx-auto px-4 py-8">
+    <DistrictHeader client:load district={district} />
+    {events.length > 0 ? (
+      <EventGridWrapper client:load events={events} />
+    ) : (
+      <p class="text-center py-12 text-gray-600">No events yet.</p>
+    )}
+  </div>
+</Layout>
