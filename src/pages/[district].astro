@@ -11,16 +11,22 @@ export async function getStaticPaths() {
 }
 
 const { district } = Astro.params;
-const events = eventsData[district as keyof typeof eventsData] || [];
+const events = eventsData[district] || [];
 ---
+
 <Layout title={districtName(district)}>
   <Navbar client:load />
-  <div class="pt-20 md:pt-0 max-w-7xl mx-auto px-4 py-8">
-    <DistrictHeader client:load district={district} />
-    {events.length > 0 ? (
-      <EventGridWrapper client:load events={events} />
-    ) : (
-      <p class="text-center py-12 text-gray-600">No events yet.</p>
-    )}
+
+  <div class="pt-20 md:pt-0 bg-gradient-to-br from-red-600 via-red-400 to-yellow-400 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+
+      <DistrictHeader client:load district={district} />
+
+      {events.length > 0 ? (
+        <EventGridWrapper client:load events={events} />
+      ) : (
+        <p class="text-center py-12 text-white text-xl drop-shadow">No events yet.</p>
+      )}
+    </div>
   </div>
 </Layout>

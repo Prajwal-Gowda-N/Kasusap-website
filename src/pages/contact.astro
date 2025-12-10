@@ -1,5 +1,4 @@
 ---
-// src/pages/contact.astro
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/NavbarSolid.tsx";
 import ContactCard from "../components/ContactCard.tsx";
@@ -10,15 +9,17 @@ import { contactPage } from "../lib/districtnames.ts";
 <Layout title={contactPage.title.kn}>
   <Navbar client:load />
 
-  <main class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-20 md:pt-0">
+  <main class="min-h-screen bg-gradient-to-br from-red-600 via-red-400 to-yellow-400 pt-20 md:pt-0">
     <section class="py-16 px-6 text-center">
+
       <ReactiveHeading
         client:load
         en={contactPage.title.en}
         kn={contactPage.title.kn}
-        class="text-4xl md:text-5xl font-bold text-blue-900 mb-6"
+        class="text-4xl md:text-5xl font-bold text-white drop-shadow mb-6"
       />
-      <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
+
+      <p class="text-lg text-white max-w-4xl mx-auto leading-relaxed mb-12 drop-shadow">
         {contactPage.description.kn}
       </p>
 
@@ -30,18 +31,3 @@ import { contactPage } from "../lib/districtnames.ts";
     </section>
   </main>
 </Layout>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;600;700&display=swap');
-  body { font-family: 'Noto Serif Kannada', serif; }
-  
-  .contact-card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 
-      0 10px 30px rgba(0, 0, 0, 0.1),
-      0 -10px 30px rgba(255, 255, 255, 0.3);
-  }
-</style>
