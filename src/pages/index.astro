@@ -5,50 +5,56 @@ import Navbar from '../components/NavbarSolid.tsx';
 import MegaCarousel from '../components/MegaCarousel.tsx';
 import MegaEventCard from '../components/MegaEventCard.tsx';
 import ReactiveHeading from '../components/ReactiveHeading.tsx';
+import Footer from '@/components/Footer.astro';
 import { t } from '../lib/districtnames';
 ---
+
 <Layout title={t("Home","ಮುಖಪುಟ")}>
   <Navbar client:load />
 
-  <main class="pt-20 md:pt-0">
-    <!-- HERO CAROUSEL -->
-   <MegaCarousel
-  client:load
-  images={[
-    "/images/mega/hero1.jpg",
-    "/images/mega/hero2.jpg",
-    "/images/mega/hero3.jpg"
-  ]}
-  height="h-64 md:h-96"
-/>
+  <main class="pt-20 md:pt-0 bg-gray-50">
+    <!-- HERO CAROUSEL – BIGGER VERSION -->
+    <div class="w-full">
+      <MegaCarousel
+        client:load
+        images={[
+          "/images/mega/poetry-1.png",
+          "/images/mega/poetry-2.png",
+          "/images/mega/poetry-3.png"
+        ]}
+        height="h-[50vh] md:h-[70vh] lg:h-[80vh]"
+        fullWidth={true}
+      />
+    </div>
 
     <!-- PAST MEGA EVENTS SECTION -->
-    <section class="max-w-7xl mx-auto px-4 py-12">
-      <!-- Reactive Heading -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
       <ReactiveHeading
-  client:load
-  en="Past Mega Events"
-  kn="ಹಿಂದಿನ ಮೆಗಾ ಕಾರ್ಯಕ್ರಮಗಳು"
-  class="text-3xl font-bold text-center mb-8 text-blue-800"
-/>
+        client:load
+        en="Past Mega Events"
+        kn="ಹಿಂದಿನ ಮೆಗಾ ಕಾರ್ಯಕ್ರಮಗಳು"
+        class="text-4xl font-bold text-center mb-12 text-gray-900"
+      />
 
-      <!-- Reactive Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <MegaEventCard
-  client:load
-  slug="poetry-fest"
-  titleEn="Grand Kannada Poetry Festival"
-  titleKn="ಭವ್ಯ ಕನ್ನಡ ಕಾವ್ಯೋತ್ಸವ"
-  image="/images/mega/poetry-thumb.jpg"
-/>
+          client:load
+          slug="poetry-fest"
+          titleEn="Grand Kannada Poetry Festival"
+          titleKn="ಭವ್ಯ ಕನ್ನಡ ಕಾವ್ಯೋತ್ಸವ"
+          image="/images/mega/poetry-1.png"
+        />
         <MegaEventCard
-  client:load
-  slug="literature-conclave"
-  titleEn="Kannada Literature Conclave"
-  titleKn="ಕನ್ನಡ ಸಾಹಿತ್ಯ ಸಮಾವೇಶ"
-  image="/images/mega/conclave-thumb.jpg"
-/>
+          client:load
+          slug="literature-conclave"
+          titleEn="Kannada Literature Conclave"
+          titleKn="ಕನ್ನಡ ಸಾಹಿತ್ಯ ಸಮಾವೇಶ"
+          image="/images/mega/poetry-2.png"
+        />
       </div>
     </section>
   </main>
+
+  <!-- FOOTER – Black & White theme, bilingual, responsive -->
+ <Footer />
 </Layout>

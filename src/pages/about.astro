@@ -1,1 +1,272 @@
-<h1>Hey this is about page</h1>
+---
+// src/pages/about.astro
+import Layout from "../layouts/Layout.astro";
+import Navbar from '../components/NavbarSolid.tsx';
+import ReactiveHeading from "../components/ReactiveHeading.tsx";
+import ReactiveText from "../components/ReactiveText.tsx";
+import Footer from "@/components/Footer.astro";
+import { t } from '../lib/districtnames';
+
+// Type for each poet/artist card (strict TS)
+interface PoetCard {
+  nameEn: string;
+  nameKn: string;
+  imageUrl: string;
+}
+
+// Bilingual list of poets
+const poets: PoetCard[] = [
+  { nameEn: "Airsangha V C", nameKn: "ಐರ್ಸಂಗ ವಿ ಸಿ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/Airsangha-V-C.avif" },
+  { nameEn: "Ananthaswamy Mysore", nameKn: "ಅನಂತಸ್ವಾಮಿ ಮೈಸೂರು", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/Ananthaswamy-Mysore.avif" },
+  { nameEn: "Ashwath C", nameKn: "ಅಶ್ವತ್ ಸಿ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/Ashwath-C.avif" },
+  { nameEn: "Atri G V", nameKn: "ಅತ್ರಿ ಜಿ ವಿ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/Atri-G-V.avif" },
+  { nameEn: "Balappa Hukkeri", nameKn: "ಬಾಳಪ್ಪ ಹುಕ್ಕೇರಿ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/kas3.jpg" },
+  { nameEn: "Bendre D R", nameKn: "ಬೇಂದ್ರೆ ದ ರಾ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/kas4.jpg" },
+  { nameEn: "Chennaveera Kanavi", nameKn: "ಚೆನ್ನವೀರ ಕಣವಿ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/kas5.jpg" },
+  { nameEn: "Doddarange Gowda", nameKn: "ದೊಡ್ಡರಂಗ ಗೌಡ", imageUrl: "https://kasusampa.in/wp/wp-content/uploads/2026/02/kas6.jpg" },
+];
+---
+
+<Layout title={t("About Sugama Sangeetha", "ಸುಗಮ ಸಂಗೀತ ಬಗ್ಗೆ")}>
+
+  <!-- Navbar -->
+  <Navbar client:load />
+
+  <main class="pt-20 md:pt-0 min-h-screen bg-gray-50">
+
+    <!-- PART 1: Elegant About Section -->
+    <section class="about-section">
+      <div class="about-content">
+        <ReactiveHeading
+          client:load
+          en="Sugama Sangeetha"
+          kn="ಸುಗಮ ಸಂಗೀತ ಬಗ್ಗೆ"
+          class="about-title text-5xl md:text-6xl font-serif font-bold text-gray-900 mb-8 tracking-wide"
+        />
+
+        <ReactiveText
+          client:load
+          en="Sugama Sangeetha celebrates the timeless beauty of Kannada Sugama Sangeetha, a unique musical tradition that blends poetry and melody into heartfelt, expressive songs."
+          kn="ಸುಗಮ ಸಂಗೀತ ಕನ್ನಡ ಸುಗಮ ಸಂಗೀತದ ಕಾಲಾತೀತ ಸೌಂದರ್ಯವನ್ನು ಆಚರಿಸುತ್ತದೆ, ಇದು ಕಾವ್ಯ ಮತ್ತು ಸ್ವರವನ್ನು ಹೃದಯಸ್ಪರ್ಶಿ, ಅಭಿವ್ಯಕ್ತಿಪೂರ್ಣ ಗೀತೆಗಳಾಗಿ ಮಿಶ್ರಣಗೊಳಿಸುವ ವಿಶಿಷ್ಟ ಸಂಗೀತ ಪರಂಪರೆಯಾಗಿದೆ."
+          class="text-lg md:text-xl leading-relaxed mb-6 text-gray-800"
+        />
+
+        <ReactiveText
+          client:load
+          en="Over time, it evolved from a poetic movement into a cherished musical tradition, touching listeners across generations through simplicity, emotion, and melody."
+          kn="ಕಾಲಾನಂತರದಲ್ಲಿ ಇದು ಕಾವ್ಯ ಚಳವಳಿಯಿಂದ ಪ್ರಿಯ ಸಂಗೀತ ಪರಂಪರೆಯಾಗಿ ಪರಿವರ್ತನೆಯಾಗಿದೆ, ಸರಳತೆ, ಭಾವನೆ ಮತ್ತು ಸ್ವರದ ಮೂಲಕ ಪೀಳಿಗೆಗಳಾದ್ಯಂತ ಶ್ರೋತೃಗಳನ್ನು ಸ್ಪರ್ಶಿಸುತ್ತದೆ."
+          class="text-lg md:text-xl leading-relaxed mb-6 text-gray-800"
+        />
+
+        <ReactiveText
+          client:load
+          en="Inspired by Karnataka’s literary heritage, poets such as Kuvempu, Da Ra Bendre, Masti Venkatesh Iyengar, and others laid the foundation for poetry-driven music that remains timeless and accessible."
+          kn="ಕರ್ನಾಟಕದ ಸಾಹಿತ್ಯ ಪರಂಪರೆಯಿಂದ ಪ್ರೇರಿತರಾಗಿ, ಕುವೆಂಪು, ದ.ರಾ. ಬೇಂದ್ರೆ, ಮಾಸ್ತಿ ವೆಂಕಟೇಶ ಐಯಂಗಾರ್ ಮತ್ತು ಇತರ ಕವಿಗಳು ಕಾವ್ಯಾಧಾರಿತ ಸಂಗೀತಕ್ಕೆ ಶಾಶ್ವತ ಮತ್ತು ಸುಲಭವಾಗಿ ಲಭ್ಯವಿರುವ ಅಡಿಪಾಯವನ್ನು ಹಾಕಿದರು."
+          class="text-lg md:text-xl leading-relaxed text-gray-800"
+        />
+      </div>
+    </section>
+
+    <!-- PART 2: Popularly Known As – Filter + Cards -->
+    <section class="py-16 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <ReactiveHeading
+          client:load
+          en="Popularly Known As"
+          kn="ಜನಪ್ರಿಯವಾಗಿ ಗೊತ್ತಿರುವ ಹೆಸರುಗಳು"
+          class="text-4xl font-bold text-center text-gray-900 mb-10"
+        />
+
+        <!-- Filter Dropdown -->
+        <div class="filter-box mb-12 text-center">
+          <label class="block text-xl font-semibold text-gray-800 mb-4">
+            {t("Filter by Popularly Known as", "ಜನಪ್ರಿಯವಾಗಿ ಗೊತ್ತಿರುವ ಹೆಸರಿನಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಿ")}
+          </label>
+          <select
+            id="nameFilter"
+            class="w-full max-w-md mx-auto px-6 py-4 text-lg rounded-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600 shadow-md bg-white text-gray-900"
+            onchange="window.filterCards()"
+          >
+            <option value="all">{t("Select Name", "ಹೆಸರು ಆಯ್ಕೆಮಾಡಿ")}</option>
+            {poets.map(poet => (
+              <option value={poet.nameEn}>{poet.nameEn} / {poet.nameKn}</option>
+            ))}
+          </select>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {poets.map(poet => (
+            <div class="card bg-white border border-gray-300 shadow-md rounded-xl p-6 text-center transition hover:shadow-lg hover:border-gray-500" data-name={poet.nameEn}>
+              <img src={poet.imageUrl} alt={poet.nameEn} class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-gray-200" loading="lazy" />
+              <h3 class="mt-4 text-lg font-bold text-gray-900">
+                {t(poet.nameEn, poet.nameKn)}
+              </h3>
+              <button class="mt-3 px-6 py-2 border border-gray-700 rounded-full text-gray-800 hover:bg-gray-800 hover:text-white transition">
+                {t("Read More", "ಇನ್ನಷ್ಟು ಓದಿ")}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER – Black & White theme -->
+  <Footer/>
+</Layout>
+
+<!-- Styles – Black & White version -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Mr+De+Haviland&family=Noto+Serif+Kannada:wght@400;600;700&display=swap');
+
+  .about-section {
+    width: 100%;
+    min-height: 750px;
+    background-image: url('https://kasusampa.in/wp/wp-content/uploads/2026/02/kas1-1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .about-content {
+    margin: 60px;
+    max-width: 900px;
+    color: #000;
+  }
+
+  .about-content h1 {
+    line-height: 0.9em;
+    font-size: 56px;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+
+  .highlight {
+    font-size: 72px;
+    font-family: 'Mr De Haviland', cursive;
+    font-weight: normal;
+  }
+
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+
+  /* Responsive for about section */
+  @media (max-width: 992px) {
+    .about-section { min-height: 650px; }
+    .about-content { margin: 40px; }
+    .about-content h1 { font-size: 44px; }
+    .highlight { font-size: 56px; }
+  }
+
+  @media (max-width: 768px) {
+    .about-section { min-height: auto; padding: 60px 20px; }
+    .about-content { margin: 0; max-width: 100%; }
+    .about-content h1 { font-size: 34px; line-height: 1.1em; }
+    .highlight { font-size: 44px; }
+    .about-content p { font-size: 15px; line-height: 1.7; }
+  }
+
+  @media (max-width: 480px) {
+    .about-content h1 { font-size: 28px; }
+    .highlight { font-size: 36px; }
+    .about-content p { font-size: 14px; }
+  }
+
+  /* Card Grid – Black & White */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .card {
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    border-color: #aaa;
+  }
+
+  .card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+  }
+
+  .card h3 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .card button {
+    padding: 8px 18px;
+    border: 1px solid #333;
+    background: white;
+    color: #111;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .card button:hover {
+    background: #111;
+    color: white;
+  }
+
+  /* Responsive Cards */
+  @media (max-width: 992px) {
+    .card-container { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .card-container { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+    .card img { width: 130px; height: 130px; }
+  }
+
+  @media (max-width: 480px) {
+    .card-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .card img { width: 110px; height: 110px; }
+    .card h3 { font-size: 16px; }
+  }
+</style>
+
+<!-- JavaScript for filtering -->
+<script is:inline>
+  window.filterCards = function () {
+    const select = document.getElementById("nameFilter");
+    if (!select) return;
+
+    const selected = select.value;
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      if (selected === "all" || card.dataset.name === selected) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  };
+</script>

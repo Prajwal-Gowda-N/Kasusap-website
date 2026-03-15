@@ -13,56 +13,82 @@ const t = (item: { en: string; kn: string }) =>
   lang() === 'en' ? item.en : item.kn;
 
 export default function NavbarSolid() {
-  createEffect(() => lang()); // ← Makes everything reactive
+  createEffect(() => lang()); // Makes everything reactive
 
   return (
-    <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-2xl border-t z-50 md:static md:shadow-none">
+    <nav class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white shadow-2xl border-t border-gray-700 z-50 md:static md:shadow-none md:bg-black md:border-b md:border-gray-800">
       <div class="max-w-7xl mx-auto">
 
-        {/* MOBILE */}
+        {/* MOBILE – Bottom Navbar */}
         <div class="flex md:hidden justify-around items-center py-3">
-          <a href="/" class="flex flex-col items-center text-blue-600">
+          <a href="/" class="flex flex-col items-center hover:text-gray-300 transition">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2L3 7v11h14V7l-7-5z"/></svg>
-            <span class="text-xs">{t(nav.home)}</span>
+            <span class="text-xs mt-1">{t(nav.home)}</span>
           </a>
 
-          <a href="/districts" class="flex flex-col items-center text-orange-600 font-bold">
+          <a href="/districts" class="flex flex-col items-center hover:text-gray-300 transition font-medium">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2v2H4v14h12V4h-2V2h-2v2H8V2H6z"/></svg>
-            <span class="text-xs">{t(nav.events)}</span>
+            <span class="text-xs mt-1">{t(nav.events)}</span>
           </a>
 
-          <a href="/about" class="flex flex-col items-center text-gray-700">
+          <a href="/about" class="flex flex-col items-center hover:text-gray-300 transition">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 20a10 10 0 110-20 10 10 0 010 20zm1-11h1v5h-1v-5zm0-3h1v1h-1V6z"/></svg>
-            <span class="text-xs">{t(nav.about)}</span>
+            <span class="text-xs mt-1">{t(nav.about)}</span>
           </a>
 
-          <div class="flex gap-1 bg-gray-100 p-1 rounded-lg">
+          {/* Language Toggle */}
+          <div class="flex gap-1 bg-gray-800 p-1 rounded-lg">
             <button
-              class={`px-3 py-1 text-xs rounded ${lang() === 'en' ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
+              class={`px-3 py-1 text-xs rounded transition ${
+                lang() === 'en' ? 'bg-gray-600 text-white' : 'text-gray-300 hover:bg-gray-700'
+              }`}
               onClick={() => switchLang('en')}
-            >EN</button>
+            >
+              EN
+            </button>
             <button
-              class={`px-3 py-1 text-xs rounded ${lang() === 'kn' ? 'bg-blue-600 text-white' : 'text-gray-700'}`}
+              class={`px-3 py-1 text-xs rounded transition ${
+                lang() === 'kn' ? 'bg-gray-600 text-white' : 'text-gray-300 hover:bg-gray-700'
+              }`}
               onClick={() => switchLang('kn')}
-            >ಕನ್ನಡ</button>
+            >
+              ಕನ್ನಡ
+            </button>
           </div>
         </div>
 
-        {/* DESKTOP */}
-        <div class="hidden md:flex justify-between items-center py-4 px-6">
-          <a href="/" class="text-2xl font-bold text-blue-800">KASUSAP</a>
-          <div class="flex items-center gap-8">
-            <a href="/" class="hover:text-blue-600">{t(nav.home)}</a>
-            <a href="/about" class="hover:text-blue-800">{t(nav.about)}</a>
-            <a href="/districts" class="hover:text-blue-800">
+        {/* DESKTOP – Top Navbar */}
+        <div class="hidden md:flex justify-between items-center py-4 px-6 bg-black">
+          <a href="/" class="text-2xl font-bold text-white hover:text-gray-300 transition">
+            Sugama Sangeetha
+          </a>
+
+          <div class="flex items-center gap-10">
+            <a href="/" class="hover:text-gray-300 transition">{t(nav.home)}</a>
+            <a href="/about" class="hover:text-gray-300 transition">{t(nav.about)}</a>
+            <a href="/districts" class="hover:text-gray-300 transition">
               {t(nav.events)}
             </a>
-            <a href="/contact" class="hover:text-blue-800">{t(nav.contact)}</a>
-            <div class="flex gap-1 bg-gray-100 p-1 rounded-lg">
-              <button class={`px-3 py-1 ${lang() === 'en' ? 'bg-blue-600 text-white' : ''}`}
-                      onClick={() => switchLang('en')}>English</button>
-              <button class={`px-3 py-1 ${lang() === 'kn' ? 'bg-blue-600 text-white' : ''}`}
-                      onClick={() => switchLang('kn')}>ಕನ್ನಡ</button>
+            <a href="/contact" class="hover:text-gray-300 transition">{t(nav.contact)}</a>
+
+            {/* Language Toggle */}
+            <div class="flex gap-1 bg-gray-800 p-1 rounded-lg">
+              <button
+                class={`px-4 py-1.5 text-sm rounded transition ${
+                  lang() === 'en' ? 'bg-gray-600 text-white' : 'text-gray-300 hover:bg-gray-700'
+                }`}
+                onClick={() => switchLang('en')}
+              >
+                English
+              </button>
+              <button
+                class={`px-4 py-1.5 text-sm rounded transition ${
+                  lang() === 'kn' ? 'bg-gray-600 text-white' : 'text-gray-300 hover:bg-gray-700'
+                }`}
+                onClick={() => switchLang('kn')}
+              >
+                ಕನ್ನಡ
+              </button>
             </div>
           </div>
         </div>
